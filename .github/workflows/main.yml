@@ -16,8 +16,7 @@ jobs:
     - name: Install dependencies
       run: | 
         # обновление pip
-        python -m pip install --upgrade pip 
-        # установка flake8 и его плагинов
+        python -m pip install --upgrade pip
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         # установка зависимостей
         pip install -r requirements.txt 
@@ -26,8 +25,7 @@ jobs:
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
-        # перейти в папку, содержащую manage.py — 
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
+        # перейти в папку, содержащую manage.py —
         cd infra_project/
         # запустить написанные разработчиком тесты
         python manage.py test
